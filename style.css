@@ -19,9 +19,9 @@ body {
 }
 
 .submit-para {
-  position: absolute;
-  top: 100px;
-  left: 657px;
+  position: relative;
+  top: 0px;
+  left: 130px;
   margin: 0;
 }
 
@@ -317,13 +317,6 @@ li:first-child {
       right: 0px;
       padding: 0;
       margin: 0;
-      top: 170px;
-    }
-
-    .submit-para {
-      position: absolute;
-      top: 100px;
-      left: 250px;
-      margin: 0;
+      top: 200px;
     }
   }
