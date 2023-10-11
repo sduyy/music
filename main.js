@@ -57,6 +57,7 @@ const hours = new Date().getHours()
 	let time = callTime()
 	function callTime() {
 		if(isDayTime === true){
+			Body.classList.add("day")
 			return ('day');
 	    } 
 	  	else {
@@ -70,7 +71,7 @@ function execute() {
 
 	// Day night detector for main
 	const hours = new Date().getHours()
-	const isDayTime = hours > 6 && hours < 12;
+	const isDayTime = hours > 6 && hours < 17;
 	let time = callTime()
 	function callTime() {
 		if(isDayTime === true){
@@ -89,10 +90,13 @@ function execute() {
 	// Songs list
 	let notYetSongs = callSongs();
 	function callSongs() {
-		if (userInput == 'cangco' && time == 'day') {
+		if (time == 'day') {
 			return [
 					'How Deep Is Your Love - Coffee Jazz Melody',
 					'Dream Like Big Band - Coffee Jazz Melody',
+					'Togther With Coffee And Jazz - Coffee Jazz Melody',
+					'This Is Always - Coffee Jazz Melody',
+					'Sea Of Love - Coffee Jazz Melody'
 					]
 		} 
 		else if (userInput == 'cangco' && time == 'night') {
@@ -117,12 +121,6 @@ function execute() {
 					'Beethoven - Fur Elise',
 				]
 			}
-		}
-		else if (userInput == 'tramcam' && time == 'day') {
-			return [
-					'How Deep Is Your Love - Coffee Jazz Melody',
-					'Dream Like Big Band - Coffee Jazz Melody',
-					]
 		}
 		else if (userInput == 'tramcam' && time == 'night') {
 			const AgeNumber = document.getElementById('age').value;
@@ -154,8 +152,17 @@ function execute() {
 				'Art Farmer - Goodbye, Old Girl'
 			]
 		}
+		else if (userInput == 'mattrinho') {
+			return [
+				'Lady Gaga - Always Remember Us This Way',
+				'Pachelbel - Canon In D',
+				'Adele - Rolling In The Deep',
+				'Beyoncé - Halo',
+				'Ellie Goulding - Love Me Like You Do'
+			]
+		}
 		else {
-			return ['spanish']
+			return ['-']
 		}
 	}
 

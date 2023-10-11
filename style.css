@@ -19,12 +19,17 @@ body {
   z-index: 0;
 }
 
+.day {
+  animation: bg2;
+  animation-fill-mode: forwards;
+}
+
 .night {
   animation: bg;
   animation-fill-mode: forwards;
 }
 
-@keyframes bg{
+@keyframes bg {
   from {background-image: linear-gradient(
     0deg,
     #51e2f5 23.8%,
@@ -34,7 +39,20 @@ body {
     0deg,
     #d4f805 23.8%,
     #e9eb74 92%
-  );}
+  )}
+}
+
+@keyframes bg2 {
+  from {background-image: linear-gradient(
+    0deg,
+    #d4f805 23.8%,
+    #e9eb74 92%
+  )}
+  to {background-image: linear-gradient(
+    0deg,
+    #51e2f5 23.8%,
+    #9df9ef 92%
+  )}
 }
 
 .submit-para {
